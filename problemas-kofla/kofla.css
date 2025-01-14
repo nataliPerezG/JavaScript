@@ -44,7 +44,8 @@ main {
   padding: 20px 40px;
 }
 
-.ejerciciosUno {
+section {
   background-color: var(--background-section);
   padding: 10px 20px;
+  margin: 10px auto;
 }
