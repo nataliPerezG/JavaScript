@@ -112,6 +112,77 @@ if (operacion > 4 || operacion <= 0) {
  */
 
 
+// Características de los celulares
+/*
+class Celular {
+  constructor(color, peso, rdp, cam, ram) {
+    this.color = color;
+    this.peso = peso;
+    this.rdp = rdp;
+    this.cam = cam;
+    this.ram = ram;
+    this.encendido = true
+  }
+
+  mostrarinfo() {
+    document.write(
+      `Color: ${this.color}.<br>
+      Peso: ${this.peso}.<br>
+      Resolución de pantalla: ${this.rdp}.<br>
+      Resolución de cámara: ${this.cam}.<br>
+      Memoria RAM: ${this.ram}`
+    )
+  }
+
+  encenderApagar() {
+    if (this.encendido == true) {
+      console.log("Teléfono encendido");
+      this.encendido = false
+    } else {
+      console.log("Teléfono apagado");
+      this.encendido = true;
+    }
+  }
+
+  reiniciar() {
+    if (this.encendido == true) {
+      console.log("Reiniciando celular")
+    } else {
+      console.log("Celular apagado")
+    }
+
+  }
+  tomarFoto() {
+    console.log("foto tomada en una resolución " + this.cam)
+  }
+  grabarVideo() {
+    console.log("video grabado en una resolución " + this.cam)
+  }
+}
+
+const celularUno = new Celular("negro", "300gr", "1200px", "12px", "16gb");
+
+const celularDos = new Celular("rojo", "200gr", "1000px", "18px", "8gb");
+
+const celularTres = new Celular("blanco", "100gr", "1500px", "20px", "20gb");
+
+console.log(celularUno)
+celularDos.encenderApagar()
+celularDos.tomarFoto()
+celularDos.grabarVideo()
+celularDos.reiniciar()
+celularDos.encenderApagar()
+celularDos.reiniciar()
+celularDos.mostrarinfo()
+ */
+
+// Mismo proceso para crear las aplicaciones
+
+
+
+
+
+
 
 
 
