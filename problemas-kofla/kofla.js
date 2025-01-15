@@ -178,6 +178,59 @@ celularDos.mostrarinfo()
 
 // Mismo proceso para crear las aplicaciones
 
+// Calculadora mejorada
+
+/* 
+let operacion = +prompt(`Qué operción deseas realizar?:
+  1. Suma.
+  2. Resta.
+  3. Multiplicación.
+  4. División
+  5. Potencia.
+  6. Raíz cuadrada.
+  7. Raíz cúbica.`)
+
+let resultado;
+let numUno;
+let numDos;
+let numUnico;
+
+if (operacion > 7 || operacion <= 0) {
+  alert("Dato inesperado")
+} else if (operacion <= 5) {
+  numUno = +prompt("Ingresa el primer número");
+  numDos = +prompt("Ingresa el segundo número");
+} else {
+  numUnico = +prompt("Ingresa el número")
+}
+
+switch (operacion) {
+  case 1:
+    resultado = numUno + numDos
+    break;
+  case 2:
+    resultado = numUno - numDos
+    break;
+  case 3:
+    resultado = numUno * numDos
+    break;
+  case 4:
+    resultado = numUno / numDos
+    break;
+  case 5:
+    resultado = Math.pow(numUno, numDos)
+    break;
+  case 6:
+    resultado = Math.sqrt(numUnico)
+  case 7:
+    resultado = Math.cbrt(numUnico)
+    break;
+  default:
+    alert("Dato inesperado")
+    break;
+}
+alert(`Tu resultado es ${resultado}`);
+ */
 
 
 
