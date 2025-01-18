@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Carrito de Compras</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h2>CARRITO DE COMPRAS</h2>
+
+    <section id="productos">
+
+      <article>
+        <label>Fresa</label>
+        <button data-fruta="fresa">Comprar</button>
+      </article>
+
+      <article>
+        <label>Mora</label>
+        <button data-fruta="mora">Comprar</button>
+      </article>
+
+      <article>
+        <label>Lulo</label>
+        <button data-fruta="lulo">Comprar</button>
+      </article>
+
+    </section>
+
+    <section id="carrito">
+
+
+    </section>
+
+  </main>
+
+  <template id="template">
+    <article class="fresa">
+      <p>Fresa</p>
+      <div class="cant">4</div>
+    </article>
+  </template>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
