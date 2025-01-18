@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(90, 16, 80);
+  margin: 5dvh auto;
+}
+
+section {
+  background-color: #eee;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin: 3dvh;
+  padding: 5px;
+  display: flex;
+
+}
+
+#productos {
+  align-self: center;
+  justify-content: space-around;
+  padding: 1%;
+}
+
+#productos article {
+  width: 28%;
+  max-width: 150px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 2dvw;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin: 1dvh;
+  font-size: 1.3rem;
+  color: rgb(90, 16, 80);
+  font-weight: bolder;
+}
+
+button {
+  width: 95%;
+  height: 5dvh;
+  margin: 1dvh;
+  padding: 5%;
+  font-size: 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(10, 70, 10);
+  background-color: rgb(10, 70, 10);
+  color: #ddd;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #5f5;
+  border: 1px solid #5f5;
+  color: rgb(6, 49, 6);
+}
+
+
+#carrito {
+  flex-direction: column;
+}
+
+#carrito article {
+  width: 90%;
+  margin: 10px auto;
+  padding: 5px 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+p {
+  color: rgb(90, 16, 80);
+  font-weight: bold;
+  margin-left: 3%;
+}
+
+.cant {
+  background-color: rgb(10, 70, 10);
+  color: #ddd;
+  padding: 2%;
+  border-radius: 50%;
+}
