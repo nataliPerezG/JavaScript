@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Carrito de Compras</title>
+</head>
+
+<body>
+  <main>
+
+    <h1>Carrito de Compras</h1>
+
+    <section id="productos">
+
+      <div id="container">
+
+        <section class="mora">
+          <h4>Mora</h4>
+          <p>$ <span>150</span> </p>
+          <button class="btn-agregar" data-nombre="mora" data-precio="150">Agregar</button>
+        </section>
+
+        <section class="mango">
+          <h4>Mango</h4>
+          <p>$ <span>200</span> </p>
+          <button class="btn-agregar" data-nombre="mango" data-precio="200">Agregar</button>
+        </section>
+
+        <section class="lulo">
+          <h4>Lulo</h4>
+          <p>$ <span>400</span> </p>
+          <button class="btn-agregar" data-nombre="lulo" data-precio="400">Agregar</button>
+        </section>
+
+      </div>
+
+    </section>
+
+    <section id="carrito"></section>
+
+    <template id="template-carrito">
+      <article>
+        <ul>
+          <li id="carrito-etiqueta">
+            <div class="cant">5</div>
+            <p>MORA</p>
+          </li>
+          <li id="carrito-total">
+            <p>Total: $<span>500</span></p>
+            <div class="botones">
+              <button>Agregar</button>
+              <button class="eliminar">Eliminar</button>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </template>
+
+    <footer id="total"></footer>
+
+    <template id="template-footer">
+      <article>
+        <p>Total: $<span>300</span></p>
+        <button class="finalizar">Finalizar Compra</button>
+      </article>
+    </template>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
