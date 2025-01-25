@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
+
+header,
+main {
+  width: 60%;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 1rem;
+}
+
+header {
+  padding: 2rem;
+}
+
+header * {
+  margin: 10px;
+}
+
+.calculadora {
+  width: 50%;
+  height: 55%;
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+  background-color: azure;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+#pantalla {
+  margin: .5rem;
+  width: 22dvw;
+  height: 5dvh;
+  border: none;
+  border-radius: 5px;
+  padding: .5rem;
+  text-align: end;
+  box-shadow: 3px 3px 5px 5px rgb(175, 170, 170);
+}
+
+.teclado {
+  border: none;
+  border-radius: 7px;
+  box-shadow: 3px 3px 5px 5px rgb(175, 170, 170);
+  width: 85%;
+  margin: 10px auto;
+  padding: .7rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.teclado button {
+  align-self: start;
+  padding: 5px;
+  margin: 4px 2px;
+  width: 4dvw;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.teclado button:hover {
+  cursor: pointer;
+  background-color: #ddd;
+  border-bottom: none;
+  box-shadow: 0 0 1px 1px #ddd;
+}

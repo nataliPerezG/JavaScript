@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="calculadora.css">
+  <title>Calculadora</title>
+</head>
+
+<body>
+  <header>
+    <h2>Calculadora</h2>
+    <h5>Sergie Code</h5>
+  </header>
+
+  <main>
+
+    <div class="calculadora">
+
+      <div>
+        <input id="pantalla" type="text" readonly>
+      </div>
+
+      <div class="teclado">
+        <button value="1" onclick="agregar('1')">1</button>
+        <button value="2" onclick="agregar('2')">2</button>
+        <button value="3" onclick="agregar('3')">3</button>
+        <button value="+" onclick="agregar('+')">+</button>
+        <button value="4" onclick="agregar('4')">4</button>
+        <button value="5" onclick="agregar('5')">5</button>
+        <button value="6" onclick="agregar('6')">6</button>
+        <button value="-" onclick="agregar('-')">-</button>
+        <button value="7" onclick="agregar('7')">7</button>
+        <button value="8" onclick="agregar('8')">8</button>
+        <button value="9" onclick="agregar('9')">9</button>
+        <button value="*" onclick="agregar('*')">*</button>
+        <button value="0" onclick="agregar('0')">0</button>
+        <button value="." onclick="agregar('.')">.</button>
+        <button value="/" onclick="agregar('/')">/</button>
+        <button value="=" onclick="igual()">=</button>
+        <button value="c" onclick="borrar()">C</button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
