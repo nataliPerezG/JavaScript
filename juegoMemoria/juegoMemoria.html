@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="juegoMemoria.css">
+
+  <title>Juego de Memoria</title>
+</head>
+
+<body>
+
+  <main>
+    <section id="section1">
+      <h1>Juego de Memoria</h1>
+      <table>
+        <tr>
+          <td><button onclick="descubrir(0)" id="0"></button></td>
+          <td><button onclick="descubrir(1)" id="1"></button></td>
+          <td><button onclick="descubrir(2)" id="2"></button></td>
+          <td><button onclick="descubrir(3)" id="3"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="descubrir(4)" id="4"></button></td>
+          <td><button onclick="descubrir(5)" id="5"></button></td>
+          <td><button onclick="descubrir(6)" id="6"></button></td>
+          <td><button onclick="descubrir(7)" id="7"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="descubrir(8)" id="8"></button></td>
+          <td><button onclick="descubrir(9)" id="9"></button></td>
+          <td><button onclick="descubrir(10)" id="10"></button></td>
+          <td><button onclick="descubrir(11)" id="11"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="descubrir(12)" id="12"></button></td>
+          <td><button onclick="descubrir(13)" id="13"></button></td>
+          <td><button onclick="descubrir(14)" id="14"></button></td>
+          <td><button onclick="descubrir(15)" id="15"></button></td>
+        </tr>
+      </table>
+
+    </section>
+    <section id="section2">
+      <h3 id="aciertos">Aciertos: 0</h3>
+      <h3 id="t-restante">Tiempo en segundos: 0</h3>
+      <h3 id="movimientos">Movimientos: 0</h3>
+
+    </section>
+  </main>
+
+
+
+  <script src="solita.js"></script>
+</body>
+
+</html>
