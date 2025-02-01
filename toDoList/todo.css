@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+:root {
+  --bg-color: #F2EFE7;
+  --ppal-color: #9ACBD0;
+  --second-color: #48A6A7;
+  --the-third: #2973B2;
+  --font: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font);
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  width: 300px;
+  height: auto;
+}
+
+h1 {
+  margin: 10px;
+  color: var(--the-third);
+  font-family: var(--font);
+}
+
+form {
+  width: 60%;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+form input[type="text"] {
+  width: 60%;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: var(--bg-color);
+  color: var(--the-third);
+  font-size: 1.3rem;
+}
+
+form input[type="text"]::placeholder {
+  color: var(--ppal-color);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+form input[type="text"]:focus {
+  outline: none;
+}
+
+form input[type="submit"] {
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: var(--second-color);
+  color: var(--ppal-color);
+  border-radius: 50%;
+  border: none;
+}
+
+form input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--ppal-color);
+  color: var(--second-color);
+}
+
+.task {
+  border: 2px solid var(--second-color);
+  border-radius: 8px;
+  background-color: var(--ppal-color);
+  margin: 10px 5px;
+  padding: 10px;
+  font-size: 1.3rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task input {
+  width: 20px;
+  height: 20px;
+}
+
+.task label {
+  line-height: 20px;
+}
+
+.icon {
+  width: 30px;
+  height: auto;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.stats {
+  margin: 40px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.stats p {
+  font-size: 1.3rem;
+  color: var(--the-third);
+  margin: 5px;
+}
