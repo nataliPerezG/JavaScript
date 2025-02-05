@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="prsc.css">
+  <title>Paper, Rocks and Scissors</title>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Piedra, papel y tijeras</h1>
+
+    <button id="button1" onclick="playGame('piedra')">✊</button>
+
+    <button id="button2" onclick="playGame('papel')">✋</button>
+
+    <button id="button3" onclick="playGame('tijeras')">✌️</button>
+
+    <h3>Resultados:</h3>
+    <p><span id="plyElection">---</span></p>
+    <p><span id="compElection">---</span></p>
+    <p><span id="resultado">---</span></p>
+
+    <h3>Puntaje</h3>
+    <p id="puntaje">Elige una opción para comenzar el juego...</p>
+
+    <button id="button4" onclick="restart()">Reiniciar</button>
+
+  </main>
+
+  <script src="prsc.js"></script>
+</body>
+
+</html>
