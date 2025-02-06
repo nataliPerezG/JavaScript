@@ -103,6 +103,3 @@ function restart() {
 }
 
 
-function autoPlay() {
-  console.log("activo");
-}

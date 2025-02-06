@@ -16,35 +16,35 @@
 
     <h3>Elige una opción para comenzar el juego</h3>
 
-    <button id="button1" onclick="playGame('piedra')">✊</button>
+    <button id="button1" onclick="playGame('✊')">✊</button>
 
-    <button id="button2" onclick="playGame('papel')">✋</button>
+    <button id="button2" onclick="playGame('✋')">✋</button>
 
-    <button id="button3" onclick="playGame('tijeras')">✌️</button>
+    <button id="button3" onclick="playGame('✌️')">✌️</button>
 
     <h3>Resultados:</h3>
 
     <div id="ronda">
 
       <div class="textos">
-        <p>Tu: <span>✊</span> </p>
-        <p>Computadora: <span>✊</span> </p>
+        <p>Tu: <span id="playerElection">✊</span> </p>
+        <p>Computadora: <span id="computerElection">✊</span> </p>
       </div>
 
-      <h4>Ganaste!!!</h4>
+      <h4 id="rs-ronda"></h4>
 
     </div>
     <!-- 
     <p><span id="plyElection">---</span></p>
     <p><span id="compElection">---</span></p>
     <p><span id="resultado">---</span></p>
- -->
+-->
     <h3>Puntaje</h3>
 
     <div id="res-ronda">
-      <p id="wins">Victoras: 0 </p>
-      <p id="losses">Derrotas: 0 </p>
-      <p id="Ties">Empates: 0 </p>
+      <p>Victoras: <span id="wins">0</span></p>
+      <p>Derrotas: <span id="losses">0</span></p>
+      <p>Empates: <span id="ties">0</span></p>
     </div>
 
     <button id="button4" onclick="restart()">Reiniciar</button>
