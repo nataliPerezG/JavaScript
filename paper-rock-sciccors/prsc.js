@@ -1,3 +1,4 @@
+console.log("creando rama nueva")
 
 let eleccionJugador = document.getElementById("plyElection");
 let eleccionMaquina = document.getElementById("compElection");
