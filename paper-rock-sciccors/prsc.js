@@ -1,5 +1,3 @@
-console.log("creando rama nueva")
-
 let eleccionJugador = document.getElementById("plyElection");
 let eleccionMaquina = document.getElementById("compElection");
 let resultadoJuego = document.getElementById("resultado");
@@ -21,13 +19,13 @@ function playGame(playerElection) {
 
     let number = Math.random().toFixed(2);
 
-    let election = "";
+    let election = "✊";
     if (number >= 0 && number < 1 / 3) {
-      election = "piedra"
+      election = ""
     } else if (number >= 1 / 3 && number < 2 / 3) {
-      election = "papel"
+      election = "✋"
     } else {
-      election = "tijeras"
+      election = "✌️"
     }
 
     return election;
@@ -38,33 +36,33 @@ function playGame(playerElection) {
 
   let result = "";
 
-  if (playerElection === "piedra") {
+  if (playerElection === "✊") {
 
-    if (machine === "piedra") {
+    if (machine === "✊") {
       result = "empatado"
-    } else if (machine === "papel") {
+    } else if (machine === "✋") {
       result = "perdido"
-    } else if (machine === "tijeras") {
+    } else if (machine === "✌️") {
       result = "ganado!!!"
     }
 
-  } else if (playerElection === "papel") {
+  } else if (playerElection === "✋") {
 
-    if (machine === "piedra") {
+    if (machine === "✊") {
       result = "ganado!!!"
-    } else if (machine === "papel") {
+    } else if (machine === "✋") {
       result = "empatado"
-    } else if (machine === "tijeras") {
+    } else if (machine === "✌️") {
       result = "perdido"
     }
 
   } else {
 
-    if (machine === "piedra") {
+    if (machine === "✊") {
       result = "perdido"
-    } else if (machine === "papel") {
+    } else if (machine === "✋") {
       result = "ganado!!!"
-    } else if (machine === "tijeras") {
+    } else if (machine === "✌️") {
       result = "empatado"
     }
 
@@ -105,3 +103,6 @@ function restart() {
 }
 
 
+function autoPlay() {
+  console.log("activo");
+}

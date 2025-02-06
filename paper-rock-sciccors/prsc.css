@@ -13,12 +13,12 @@
 }
 
 main {
-  margin: 80px auto;
+  margin: 50px auto;
   text-align: center;
 }
 
 h1 {
-  margin: 60px auto;
+  margin: 40px auto;
   padding: 5px;
 }
 
@@ -27,7 +27,7 @@ button {
   height: 130px;
   border-radius: 50%;
   padding: 10px 20px;
-  margin: 30px 5px;
+  margin: 20px 5px;
   background-color: rgb(73, 4, 36);
   border: none;
   outline: none;
@@ -41,6 +41,36 @@ button:hover {
   cursor: pointer;
   background-color: rgb(92, 17, 79);
   box-shadow: 3px 3px 8px #eee;
+}
+
+#ronda {
+  width: 50%;
+  margin: 10px auto;
+  padding: 20px 5px;
+}
+
+.textos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.textos span {
+  display: inline-block;
+  border: 3px solid rgb(73, 4, 36);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: 10px;
+  background-color: #fff;
+  font-size: 1.5rem;
+}
+
+#res-ronda {
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #button4 {

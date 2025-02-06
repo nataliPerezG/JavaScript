@@ -14,6 +14,8 @@
 
     <h1>Piedra, papel y tijeras</h1>
 
+    <h3>Elige una opción para comenzar el juego</h3>
+
     <button id="button1" onclick="playGame('piedra')">✊</button>
 
     <button id="button2" onclick="playGame('papel')">✋</button>
@@ -21,18 +23,36 @@
     <button id="button3" onclick="playGame('tijeras')">✌️</button>
 
     <h3>Resultados:</h3>
+
+    <div id="ronda">
+
+      <div class="textos">
+        <p>Tu: <span>✊</span> </p>
+        <p>Computadora: <span>✊</span> </p>
+      </div>
+
+      <h4>Ganaste!!!</h4>
+
+    </div>
+    <!-- 
     <p><span id="plyElection">---</span></p>
     <p><span id="compElection">---</span></p>
     <p><span id="resultado">---</span></p>
-
+ -->
     <h3>Puntaje</h3>
-    <p id="puntaje">Elige una opción para comenzar el juego...</p>
+
+    <div id="res-ronda">
+      <p id="wins">Victoras: 0 </p>
+      <p id="losses">Derrotas: 0 </p>
+      <p id="Ties">Empates: 0 </p>
+    </div>
 
     <button id="button4" onclick="restart()">Reiniciar</button>
+    <button id="button4" onclick="autoPlay()">Auto</button>
 
   </main>
 
-  <script src="prsc.js"></script>
+  <script src="ppt.js"></script>
 </body>
 
 </html>
