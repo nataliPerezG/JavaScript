@@ -1,105 +1,178 @@
-let eleccionJugador = document.getElementById("plyElection");
-let eleccionMaquina = document.getElementById("compElection");
-let resultadoJuego = document.getElementById("resultado");
-let puntaje = document.getElementById("puntaje");
 
+// Elementos desde html:
+
+let computerElection =
+  document.getElementById("computerElection");
+let playerElection =
+  document.getElementById("playerElection");
+let rsRonda =
+  document.getElementById("rs-ronda")
+let wins =
+  document.getElementById("wins");
+let losses =
+  document.getElementById("losses");
+let ties =
+  document.getElementById("ties");
+let auto =
+  document.querySelector(".autoPlay");
+
+
+
+// Declaración de variables: 
+
+let resultadoRonda = "";
+let randomComputerElection = "";
+let isAutoPlaying = false;
+let interval;
+
+
+// Guardando en localStorage:
 
 let score = JSON.parse(localStorage.getItem("score"))
   || {
-  wins: 0,
-  losses: 0,
-  ties: 0
+  victorias: 0,
+  derrotas: 0,
+  empates: 0
 };
 
-console.log(score)
+// Funciones adicionales:
 
-function playGame(playerElection) {
+const eleccionMaquina = () => {
 
-  function computerElection() {
+  let randomNumber = Math.random().toFixed(2);
 
-    let number = Math.random().toFixed(2);
-
-    let election = "✊";
-    if (number >= 0 && number < 1 / 3) {
-      election = ""
-    } else if (number >= 1 / 3 && number < 2 / 3) {
-      election = "✋"
-    } else {
-      election = "✌️"
-    }
-
-    return election;
-
-  }
-
-  let machine = computerElection()
-
-  let result = "";
-
-  if (playerElection === "✊") {
-
-    if (machine === "✊") {
-      result = "empatado"
-    } else if (machine === "✋") {
-      result = "perdido"
-    } else if (machine === "✌️") {
-      result = "ganado!!!"
-    }
-
-  } else if (playerElection === "✋") {
-
-    if (machine === "✊") {
-      result = "ganado!!!"
-    } else if (machine === "✋") {
-      result = "empatado"
-    } else if (machine === "✌️") {
-      result = "perdido"
-    }
-
+  if (randomNumber > 0 && randomNumber <= 1 / 3) {
+    randomComputerElection = "✊";
+  } else if
+    (randomNumber > 1 / 3 && randomNumber <= 2 / 3) {
+    randomComputerElection = "✋";
   } else {
+    randomComputerElection = "✌️";
+  }
+  return randomComputerElection
 
-    if (machine === "✊") {
-      result = "perdido"
-    } else if (machine === "✋") {
-      result = "ganado!!!"
-    } else if (machine === "✌️") {
-      result = "empatado"
+}
+
+
+const compararResultados = () => {
+
+  if (playerElection.textContent === "✊") {
+    if (randomComputerElection === "✊") {
+      resultadoRonda = "Empataste 🤔😐";
+    } else if (randomComputerElection === "✋") {
+      resultadoRonda = "Perdiste...😭😣";
+    } else if (randomComputerElection === "✌️") {
+      resultadoRonda = "Ganaste!!! 🥳🎉";
     }
 
+  } else if (playerElection.textContent === "✋") {
+    if (randomComputerElection === "✊") {
+      resultadoRonda = "Ganaste!!! 🥳🎉";
+    } else if (randomComputerElection === "✋") {
+      resultadoRonda = "Empataste 🤔😐";
+    } else if (randomComputerElection === "✌️") {
+      resultadoRonda = "Perdiste...😭😣";
+    }
+  } else if (playerElection.textContent === "✌️") {
+    if (randomComputerElection === "✊") {
+      resultadoRonda = "Perdiste...😭😣";
+    } else if (randomComputerElection === "✋") {
+      resultadoRonda = "Ganaste!!! 🥳🎉";
+    } else if (randomComputerElection === "✌️") {
+      resultadoRonda = "Empataste 🤔😐";
+    }
   }
 
-  if (result === "perdido") {
-    score.losses += 1;
-  } else if (result === "empatado") {
-    score.ties += 1;
-  } else if (result === "ganado!!!") {
-    score.wins += 1;
+  // Mostrar el resutado de la ronda
+  rsRonda.textContent = resultadoRonda;
+}
+
+const actualizarResAcu = () => {
+
+  if (resultadoRonda === "Ganaste!!! 🥳🎉") {
+    score.victorias += 1;
+  } else if (resultadoRonda === "Empataste 🤔😐") {
+    score.empates += 1;
+  } else {
+    score.derrotas += 1;
   }
 
+  localStorage.setItem("score", JSON.stringify(score));
 
-  localStorage.setItem("score", JSON.stringify(score))
+  wins.textContent = score.victorias;
+  losses.textContent = score.derrotas;
+  ties.textContent = score.empates;
 
-  eleccionJugador.textContent = "Has elegido: " + playerElection;
-  eleccionMaquina.textContent = "La computadora eligió " + machine;
-  resultadoJuego.textContent = "Has " + result;
-  puntaje.textContent =
-    `Victorias: ${score.wins}. Derrotas: ${score.losses}. Empates: ${score.ties}`
-};
+}
+
+// Botón AutoPlay
+
+function autoPlay() {
+
+  if (!isAutoPlaying) {
+    interval = setInterval(() => {
+      const jugador = eleccionMaquina()
+      playGame(jugador)
+    }, 1000)
+    isAutoPlaying = true;
+    auto.textContent = "Detener";
+  } else {
+    clearInterval(interval);
+    isAutoPlaying = false;
+    auto.textContent = "AutoPlay";
+  }
+
+}
+
+
+// Función principal:
+
+function playGame(param) {
+
+  // Mostrar eleeección del jugador:
+  playerElection.textContent = param
+
+  // Elección de la computadora:
+  eleccionMaquina()
+
+  // Mostrar elección de la computadora:
+
+  computerElection.textContent =
+    randomComputerElection;
+
+  /* Comparar elección del jugador con la elección 
+  del jugador con la elección de la computadora:
+  */
+  compararResultados()
+
+  // actualizar el resultado acumulado:
+
+  actualizarResAcu()
+
+}
+
+// Botón Reinicio:
 
 function restart() {
 
-  eleccionJugador.textContent = "---";
-  eleccionMaquina.textContent = "---";
-  resultadoJuego.textContent = "---";
-
-  for (sc in score) {
-    score[sc] = 0;
+  for (res in score) {
+    score[res] = 0;
   }
 
-  puntaje.textContent =
-    `Victorias: ${score.wins} - Derrotas: ${score.losses} - Empates: ${score.ties}`
+  wins.textContent = score.victorias;
+  losses.textContent = score.derrotas;
+  ties.textContent = score.empates;
 
   localStorage.removeItem("score");
+
 }
+
+
+
+
+
+
+
+
 
 

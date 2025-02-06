@@ -4,6 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="prsc.css">
   <title>Paper, Rocks and Scissors</title>
 </head>
@@ -12,14 +17,12 @@
 
   <main>
 
-    <h1>Piedra, papel y tijeras</h1>
+    <h1>PIEDRA, PAPEL O TIJERAS</h1>
 
     <h3>Elige una opción para comenzar el juego</h3>
 
     <button id="button1" onclick="playGame('✊')">✊</button>
-
     <button id="button2" onclick="playGame('✋')">✋</button>
-
     <button id="button3" onclick="playGame('✌️')">✌️</button>
 
     <h3>Resultados:</h3>
@@ -34,11 +37,7 @@
       <h4 id="rs-ronda"></h4>
 
     </div>
-    <!-- 
-    <p><span id="plyElection">---</span></p>
-    <p><span id="compElection">---</span></p>
-    <p><span id="resultado">---</span></p>
--->
+
     <h3>Puntaje</h3>
 
     <div id="res-ronda">
@@ -48,11 +47,12 @@
     </div>
 
     <button id="button4" onclick="restart()">Reiniciar</button>
-    <button id="button4" onclick="autoPlay()">Auto</button>
+    <button id="button4" class="autoPlay" onclick="autoPlay()">AutoPlay</button>
 
   </main>
 
-  <script src="ppt.js"></script>
+  <script src="prsc.js"></script>
+
 </body>
 
 </html>

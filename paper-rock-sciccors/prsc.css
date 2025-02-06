@@ -2,10 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #aaa;
-  color: #444;
+  background-color: #222;
+  color: #bbb;
+  font-family: "Rubik", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
-
 
 *::after,
 *::before {
@@ -20,6 +23,7 @@ main {
 h1 {
   margin: 40px auto;
   padding: 5px;
+  font-size: 2.5rem;
 }
 
 button {
@@ -29,7 +33,7 @@ button {
   padding: 10px 20px;
   margin: 20px 5px;
   background-color: rgb(73, 4, 36);
-  border: none;
+  border: 3px solid #bbb;
   outline: none;
   text-transform: uppercase;
   font-weight: 800;
@@ -39,6 +43,7 @@ button {
 
 button:hover {
   cursor: pointer;
+  border: none;
   background-color: rgb(92, 17, 79);
   box-shadow: 3px 3px 8px #eee;
 }
@@ -62,7 +67,7 @@ button:hover {
   height: 50px;
   padding: 5px;
   margin: 10px;
-  background-color: #fff;
+  background-color: #bbb;
   font-size: 1.5rem;
 }
 
@@ -74,7 +79,8 @@ button:hover {
 }
 
 #button4 {
-  padding: 10px 20px;
+  width: 120px;
+  padding: 10px;
   margin: 10px 5px;
   height: 60px;
   border-radius: 8px;
@@ -88,6 +94,10 @@ button:hover {
   letter-spacing: 2px;
 }
 
+.autoPlay {
+  width: 140px;
+  padding: 10px 5px;
+}
 
 
 h3 {
