@@ -13,12 +13,14 @@ let losses =
   document.getElementById("losses");
 let ties =
   document.getElementById("ties");
+
+
 // Declaración de variables: 
 
 let resultadoRonda = "";
 let randomComputerElection = "";
 
-let resultadoAcumulado = {
+let score = {
   victorias: 0,
   derrotas: 0,
   empates: 0
@@ -81,20 +83,18 @@ const compararResultados = () => {
 const actualizarResAcu = () => {
 
   if (resultadoRonda === "Ganaste!!! 🥳🎉") {
-    resultadoAcumulado.victorias++
+    score.victorias += 1;
   } else if (resultadoRonda === "Empataste 🤔😐") {
-    resultadoAcumulado.empates++
+    score.empates += 1;
   } else {
-    resultadoAcumulado.derrotas++
+    score.derrotas += 1;
   }
 
-  wins.textContent = resultadoAcumulado.victorias;
-  losses.textContent = resultadoAcumulado.derrotas;
-  ties.textContent = resultadoAcumulado.empates;
+  wins.textContent = score.victorias;
+  losses.textContent = score.derrotas;
+  ties.textContent = score.empates;
 
 }
-
-
 
 // Función principal:
 
@@ -119,6 +119,16 @@ function playGame(param) {
 }
 
 // Botón Reinicio:
+
+function restart() {
+  for (res in score) {
+    score[res] = 0;
+  }
+  wins.textContent = score.victorias;
+  losses.textContent = score.derrotas;
+  ties.textContent = score.empates;
+}
+
 
 
 
