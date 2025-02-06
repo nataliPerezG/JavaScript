@@ -20,11 +20,17 @@ let ties =
 let resultadoRonda = "";
 let randomComputerElection = "";
 
-let score = {
+// Guardando en localStorage:
+
+let score = JSON.parse(localStorage.getItem("score"))
+  || {
   victorias: 0,
   derrotas: 0,
   empates: 0
-}
+};
+
+
+console.log(score)
 
 // Funciones adicionales:
 
@@ -90,6 +96,8 @@ const actualizarResAcu = () => {
     score.derrotas += 1;
   }
 
+  localStorage.setItem("score", JSON.stringify(score));
+
   wins.textContent = score.victorias;
   losses.textContent = score.derrotas;
   ties.textContent = score.empates;
@@ -116,18 +124,28 @@ function playGame(param) {
 
   actualizarResAcu()
 
+  // Guardar el resultadoAcululado en localStorage
+
+
+
 }
 
 // Botón Reinicio:
 
 function restart() {
+
   for (res in score) {
     score[res] = 0;
   }
+
   wins.textContent = score.victorias;
   losses.textContent = score.derrotas;
   ties.textContent = score.empates;
+
+  localStorage.removeItem("score");
+
 }
+
 
 
 
