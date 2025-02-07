@@ -1,5 +1,3 @@
-console.log("Mi Magno");
-
 // Elementos del html:
 
 let input = document.getElementById("input");
@@ -27,23 +25,27 @@ const presionarEnter = (event) => {
   }
 }
 
-const mostrarTarea = () => {
-  let contenido = "";
-  for (let i = 0; i < tareas.length; i++) {
 
-    let item = tareas[i]
-    let { name, date } = item
+
+
+const mostrarTarea = () => {
+
+  let contenido = "";
+
+  tareas.forEach((item, index) => {
+
+    let { name, date } = item;
     let parrafo = `
           <div class="list">
         <p>${name} <span> ${date} </span> </p>
         <button onclick="
-            tareas.splice(${i},1)
+            tareas.splice(${index},1)
             mostrarTarea()"
         >Borrar</button>
       </div>`
     contenido += parrafo;
 
-  }
+  })
 
   contLista.innerHTML = contenido
 }
