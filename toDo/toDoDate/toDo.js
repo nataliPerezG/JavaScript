@@ -33,19 +33,25 @@ const mostrarTarea = () => {
   tareas.forEach((item, index) => {
 
     let { name, date } = item;
+
     let parrafo = `
           <div class="list">
         <p>${name} <span> ${date} </span> </p>
-        <button onclick="
-            tareas.splice(${index},1)
-            mostrarTarea()"
-        >Borrar</button>
+        <button class="delete">Borrar</button>
       </div>`
     contenido += parrafo;
-
   })
 
-  contLista.innerHTML = contenido
+  contLista.innerHTML = contenido;
+
+  let deleteButtons = document.querySelectorAll(".delete");
+  deleteButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      tareas.splice(index, 1);
+      mostrarTarea()
+    })
+  })
+
 }
 
 const obtenerTarea = () => {
