@@ -19,13 +19,11 @@ let tareas = [
 
 // funciones:
 
-const presionarEnter = (event) => {
+input.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     obtenerTarea()
   }
-}
-
-
+})
 
 
 const mostrarTarea = () => {
@@ -50,7 +48,6 @@ const mostrarTarea = () => {
   contLista.innerHTML = contenido
 }
 
-
 const obtenerTarea = () => {
 
   let date = document.getElementById("date");
@@ -67,4 +64,6 @@ const obtenerTarea = () => {
   mostrarTarea();
 
 }
+
+btn.addEventListener("click", obtenerTarea);
 
