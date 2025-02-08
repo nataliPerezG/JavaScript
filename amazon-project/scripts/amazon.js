@@ -10,22 +10,18 @@ products.forEach((product) => {
       <img class="product-image" src=
       ${product.image}>
     </div>
-
     <div class="product-name limit-text-to-2-lines">
       ${product.name}
     </div>
-
     <div class="product-rating-container">
       <img class="product-rating-stars" src="images/ratings/rating-${product.rating.stars * 10}.png">
       <div class="product-rating-count link-primary">
         ${product.rating.count}
       </div>
     </div>
-
     <div class="product-price">
       $${(product.priceCents / 100).toFixed(2)}
     </div>
-
     <div class="product-quantity-container">
       <select>
         <option selected value="1">1</option>
@@ -40,9 +36,7 @@ products.forEach((product) => {
         <option value="10">10</option>
       </select>
     </div>
-
     <div class="product-spacer"></div>
-
     <div class="added-to-cart">
       <img src="images/icons/checkmark.png">
       Added
@@ -89,7 +83,14 @@ buttonAddCart.forEach((button) => {
       })
     }
 
-    console.log(cart)
+    let cartQuantity = 0;
+
+    cart.forEach((item) => {
+      cartQuantity += item.quantity;
+    })
+
+    let showCartQuantity = document.querySelector(".cart-quantity");
+    showCartQuantity.textContent = cartQuantity
 
   })
 })
