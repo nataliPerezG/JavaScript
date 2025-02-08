@@ -1,4 +1,5 @@
-
+import { cart } from "../data/cart.js";
+import { products } from "../data/products.js";
 // Datos desde el archivo data/products
 
 let productHTML = "";
@@ -94,4 +95,5 @@ buttonAddCart.forEach((button) => {
 
   })
 })
+
 
