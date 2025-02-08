@@ -49,7 +49,7 @@ products.forEach((product) => {
     </div>
 
     <button class="add-to-cart-button button-primary"
-    data-product-name="${product.name}">
+    data-product-id="${product.id}">
       Add to Cart
     </button>
   </div>
@@ -70,12 +70,12 @@ buttonAddCart.forEach((button) => {
 
   button.addEventListener("click", () => {
 
-    let productName = button.dataset.productName;
+    let productId = button.dataset.productId;
 
     let existProduct;
 
     cart.forEach((item) => {
-      if (productName === item.productName) {
+      if (productId === item.productId) {
         existProduct = item
       }
     })
@@ -84,7 +84,7 @@ buttonAddCart.forEach((button) => {
       existProduct.quantity += 1
     } else {
       cart.push({
-        productName,
+        productId,
         quantity: 1
       })
     }
