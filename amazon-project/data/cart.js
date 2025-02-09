@@ -26,3 +26,16 @@ export const addProductCart = (productId) => {
   }
 }
 
+export const removeFromCart = (productId) => {
+  let newCart = [];
+
+  cart.forEach((itemProduct) => {
+    if (itemProduct.productId !== productId) {
+      newCart.push(itemProduct)
+    }
+  })
+
+  cart = newCart;
+
+}
+
