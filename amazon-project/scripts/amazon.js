@@ -1,6 +1,6 @@
-import { cart } from "../data/cart.js";
+import { cart, addProductCart } from "../data/cart.js";
 import { products } from "../data/products.js";
-// Datos desde el archivo data/products
+
 
 let productHTML = "";
 
@@ -56,44 +56,30 @@ products.forEach((product) => {
 let productsContainer = document.querySelector(".products-grid");
 productsContainer.innerHTML = productHTML;
 
+// funciones:
 
-// Añadir elementos al carrito:
+const updateCartQuantity = () => {
+  let cartQuantity = 0;
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  })
+  let showCartQuantity = document.querySelector(".cart-quantity");
+  showCartQuantity.textContent = cartQuantity;
+}
+
+
+// Función ppal:
 
 let buttonAddCart = document.querySelectorAll(".add-to-cart-button");
 
 buttonAddCart.forEach((button) => {
-
   button.addEventListener("click", () => {
-
     let productId = button.dataset.productId;
-
-    let existProduct;
-
-    cart.forEach((item) => {
-      if (productId === item.productId) {
-        existProduct = item
-      }
-    })
-
-    if (existProduct) {
-      existProduct.quantity += 1
-    } else {
-      cart.push({
-        productId,
-        quantity: 1
-      })
-    }
-
-    let cartQuantity = 0;
-
-    cart.forEach((item) => {
-      cartQuantity += item.quantity;
-    })
-
-    let showCartQuantity = document.querySelector(".cart-quantity");
-    showCartQuantity.textContent = cartQuantity
-
+    addProductCart();
+    updateCartQuantity()
   })
-})
+});
+
+
 
 
