@@ -2,7 +2,7 @@ import { validarPersona } from "./javaScript/videoUno/maqReg.js";
 import { generarListado, pasarLista } from "./javaScript/videoUno/regAsist.js";
 import { calculadora } from "./javaScript/videoUno/calcBsc.js";
 import { Celular } from "./javaScript/videoUno/celular.js";
-import { obtenerInfo, mostrarClases } from "./javaScript/videoUno/matFacult.js";
+import { obtenerInfo, mostrarClases, inscribirAlumno } from "./javaScript/videoUno/matFacult.js";
 
 
 // Máquina de registro para ingresar:
@@ -33,8 +33,10 @@ celularTres.mostrarinfo() */
 
 
 // Facultad:
-/* obtenerInfo("mates")
-mostrarClases("Luisa") */
+obtenerInfo("mates")
+mostrarClases("Luisa")
+inscribirAlumno("arte", "Juan")
+inscribirAlumno("mate", "Carlos")
 
 
 

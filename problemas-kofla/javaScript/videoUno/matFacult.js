@@ -1,4 +1,4 @@
-const materias = {
+let materias = {
   mate: ["Sánchez", "Ana", "Pablo", "Luisa", "Miguel"],
   logica: ["Rodríguez", "Ana", "Aaron", "Sara", "Miguel"],
   fisica: ["Durán", "Andrés", "Pablo", "Luisa", "Manuel"],
@@ -51,3 +51,50 @@ export function mostrarClases(nombreAlumno) {
     }
   }
 }
+
+export function inscribirAlumno(clase, nombre) {
+
+  let personas = materias[clase];
+  if (personas.length >= 21) {
+    console.log("Lo sentimos, el cupo está lleno")
+  } else {
+    personas.push(nombre);
+    console.log(`
+      felicidades ${nombre}, fuiste
+      inscrito en ${clase}
+      `)
+
+    if (clase === "mate") {
+      materias = {
+        mate: personas,
+        logica: ["Rodríguez", "Ana", "Aaron", "Sara", "Miguel"],
+        fisica: ["Durán", "Andrés", "Pablo", "Luisa", "Manuel"],
+        arte: ["Villegas", "Ana", "Santiago", "Luisa", "Alejandra"]
+      }
+    } else if (clase === "logica") {
+      materias = {
+        mate: ["Sánchez", "Ana", "Pablo", "Luisa", "Miguel"],
+        logica: personas,
+        fisica: ["Durán", "Andrés", "Pablo", "Luisa", "Manuel"],
+        arte: ["Villegas", "Ana", "Santiago", "Luisa", "Alejandra"]
+      }
+    } else if (clase === "fisica") {
+
+      materias = {
+        mate: ["Sánchez", "Ana", "Pablo", "Luisa", "Miguel"],
+        logica: ["Rodríguez", "Ana", "Aaron", "Sara", "Miguel"],
+        fisica: personas,
+        arte: ["Villegas", "Ana", "Santiago", "Luisa", "Alejandra"]
+      }
+    } else {
+      materias = {
+        mate: ["Sánchez", "Ana", "Pablo", "Luisa", "Miguel"],
+        logica: ["Rodríguez", "Ana", "Aaron", "Sara", "Miguel"],
+        fisica: ["Durán", "Andrés", "Pablo", "Luisa", "Manuel"],
+        arte: personas
+      }
+    }
+  }
+  console.log(materias)
+}
+
