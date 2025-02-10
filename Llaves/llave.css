@@ -1,0 +1,96 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h2 {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+main {
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 2px solid darkgoldenrod;
+  border-radius: 10px;
+  background-color: #eeefd0;
+  text-align: center;
+}
+
+#container-llaves {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.cont-llave {
+  margin: 10px;
+  width: 20%;
+  /* min-width: 25%; */
+  min-height: 40dvh;
+  border: 2px solid darkolivegreen;
+  background-color: #eeedeb;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cont-llave:hover,
+.cont-llave:focus {
+  box-shadow: 5px 5px 8px rgb(165, 131, 46);
+}
+
+.cont-llave img {
+  width: 90%;
+  height: 18dvh;
+  object-fit: contain;
+  border: 2px solid rgb(147, 110, 14);
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.textos {
+  margin: 5px auto;
+  text-align: center;
+  font-size: .8rem;
+}
+
+.textos h3 {
+  margin: .5rem;
+}
+
+.texto p {
+  font-size: .5rem;
+}
+
+button {
+  margin: 1rem auto;
+  width: 40%;
+  padding: .5rem .8rem;
+  background-color: rgb(34, 49, 7);
+  color: rgb(214, 207, 107);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: .7rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: darkolivegreen;
+  color: rgb(214, 214, 197)
+}
