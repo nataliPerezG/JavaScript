@@ -9,7 +9,6 @@
 *::after,
 *::before {
   box-sizing: inherit;
-
 }
 
 form {
@@ -80,4 +79,18 @@ input[type="submit"]:focus {
   box-shadow: 3px 3px 5px rgb(255, 171, 69);
   background-color: #ddd;
   color: #666;
+}
+
+.red {
+  font-family: "Fira Sans", serif;
+  font-weight: 400;
+  color: darkorange;
+  font-size: 14px;
+}
+
+.green {
+  font-family: "Fira Sans", serif;
+  font-weight: 400;
+  color: greenyellow;
+  font-size: 14px;
 }

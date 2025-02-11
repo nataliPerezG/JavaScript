@@ -16,13 +16,13 @@
 <body>
 
   <form autocomplete="off" action="">
-    <fieldset>
+    <fieldset id="container">
       <legend>
         <h5>INSCRIPCIÓN DE MATERIAS</h5>
       </legend>
-      <input type="text" placeholder="Nombre Completo" id="name">
-      <input type="text" placeholder="Email" id="email">
-      <input type="text" placeholder="Materia Adeudada" id="subject">
+      <input type="text" placeholder="Nombre Completo" id="name" required>
+      <input type="email" placeholder="Email" id="email" required>
+      <input type="text" placeholder="Materia Adeudada" id="subject" required>
       <input type="submit" value="SOLICITAR" id="btn">
     </fieldset>
   </form>
