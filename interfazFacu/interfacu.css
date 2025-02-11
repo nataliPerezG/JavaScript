@@ -1,0 +1,54 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+main {
+  width: 90%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+h3 {
+  margin: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#container {
+  width: 80%;
+  margin: 5px auto;
+  display: grid;
+  grid-template-rows: 50px;
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+  grid-auto-rows: 50px;
+}
+
+.grid-item {
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid purple;
+  border-radius: 5px;
+  font-size: .83rem;
+}
+
+#btn {
+  width: 20%;
+  padding: 7px;
+  border: 2px solid purple;
+  border-radius: 5px;
+}
+
+#btn:hover {
+  cursor: pointer;
+  border: none;
+  box-shadow: 2px 2px 3px purple;
+}
