@@ -1,0 +1,83 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+
+}
+
+form {
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #333;
+}
+
+fieldset {
+  border-color: darkorange;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+legend {
+  text-align: left;
+  color: rgb(243, 202, 152);
+}
+
+h5 {
+  margin: 5px;
+  font-family: "Fira Sans", serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+input {
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  font-family: "Fira Sans", serif;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ddd;
+}
+
+input::placeholder {
+  font-family: "Fira Sans", serif;
+  color: #bbb;
+}
+
+input:hover,
+input:focus {
+  background-color: #666;
+  border: none;
+  box-shadow: 3px 3px 5px #ddd;
+}
+
+input[type="submit"] {
+  width: 50%;
+  margin: 20px auto;
+  background-color: #666;
+  font-family: "Fira Sans", serif;
+  font-weight: 700;
+  color: rgb(243, 202, 152);
+  border: none;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  box-shadow: 3px 3px 5px rgb(255, 171, 69);
+  background-color: #ddd;
+  color: #666;
+}
