@@ -41,11 +41,13 @@ export const capicua = (numero) => {
 
 export const factorial = (numero) => {
 
+  if (typeof number !== "number") {
+    return console.log("ingresa un número")
+  }
+
   let acu = 1;
   for (let i = 1; i <= numero; i++) {
-
     acu *= i;
-
   }
 
   console.log(acu)
