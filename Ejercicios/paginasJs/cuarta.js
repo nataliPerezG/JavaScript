@@ -42,3 +42,21 @@ export const parImpar = (numero) => {
 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
 */
 
+export const convertirGrados = (grados, medida) => {
+
+  const mayus = medida.toUpperCase();
+  if (mayus === "C") {
+    const fahrenheit = (grados * 9 / 5) + 32
+    console.log(` ${grados} grados Celsius son
+      ${fahrenheit} grados fahrenheit`)
+  }
+  if (mayus === "F") {
+    const resp = (grados - 32) * 5 / 9;
+    const celsius = resp.toFixed(2)
+
+    console.log(` ${grados} grados fahrenheit son
+      ${celsius} grados fahrenheit`)
+  }
+
+}
+

@@ -41,7 +41,6 @@ export const fraseArray = (frase = "", separador = undefined) => {
 
 export const repetirTexto = (texto = "", cantidad = undefined) => {
 
-
   (!texto)
     ? console.log("Envía una frase")
     : (cantidad === undefined)
