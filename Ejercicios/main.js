@@ -24,6 +24,10 @@ import {
   paresImpares
 } from "./paginasJs/septima.js";
 
+import { ordenarArray, eliminarDuplicados, promedio }
+  from "./paginasJs/octava.js";
+
+import { Pelicula } from "./paginasJs/novena.js";
 
 
 
