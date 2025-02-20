@@ -8,6 +8,9 @@ import { numeroAleatorio, capicua, factorial } from "./paginasJs/tercera.js";
 
 import { comprobarPrimo, parImpar, convertirGrados } from "./paginasJs/cuarta.js";
 
+import { convertirBinarioDecimal, aplicarDescuento, aniosTranscurridos } from "./paginasJs/quinta.js";
+
+aniosTranscurridos(new Date("1987,10,03"))
 
 
 

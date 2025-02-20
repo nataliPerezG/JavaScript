@@ -78,5 +78,5 @@ export const convertirGrados = (grados = undefined, medida = "") => {
 
 }
 
-convertirGrados(28, "F")
+
 
