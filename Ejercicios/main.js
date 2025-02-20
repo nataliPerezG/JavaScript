@@ -17,6 +17,15 @@ import { convertirBinarioDecimal, aplicarDescuento, aniosTranscurridos }
 import { contarLetras, nombreValido, correoValido }
   from "./paginasJs/sexta.js";
 
+import {
+  numeroAlCuadrado,
+  mayorMenorOpcionUno,
+  mayorMenorOpcionDos,
+  paresImpares
+} from "./paginasJs/septima.js";
+
+
+
 
 
 
