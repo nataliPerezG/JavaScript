@@ -1,0 +1,206 @@
+/* Estilos generales */
+:root {
+  --main-font: "Combo", serif;
+  --main-color: rgb(92, 114, 133);
+  --second-color: rgb(234, 231, 198);
+  --main-modal-color: rgb(156, 173, 143);
+  --second-modal-color: rgb(93, 107, 80);
+  --ligth-background-color: rgb(235, 236, 236);
+  --dark-background-color: rgb(64, 69, 66);
+  --container-width: 1000px;
+}
+
+
+
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  scroll-behavior: smooth;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  background-color: var(--ligth-background-color);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Menú hamburguesa */
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+.header,
+h2 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+h3 {
+  color: var(--main-color)
+}
+
+.seccion {
+  padding: 2rem;
+  padding-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 90vh;
+  text-align: center;
+}
+
+.panel {
+  position: fixed;
+  z-index: 990;
+  background-color: var(--main-modal-color);
+  width: 80%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: transform 1s ease-in-out;
+  transform: translate(-100%, 0);
+}
+
+.is-active {
+  transform: translate(0, 0);
+}
+
+.menu {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.menu>a {
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: .5rem;
+  width: inherit;
+  display: block;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--dark-background-color);
+  transition: all 1.3s ease;
+}
+
+.menu>a:hover {
+  font-weight: bold;
+  color: var(--second-color);
+  background-color: var(--second-modal-color);
+}
+
+
+.hamburger {
+  position: fixed;
+  z-index: 999;
+  bottom: 2vw;
+  right: 2vw;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 10px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  font-weight: 700;
+  font-family: var(--main-font);
+  color: var(--second-color);
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 1.5px 1.5px 1.5px 0px var(--second-color);
+  transition: all .3s ease-out;
+}
+
+.boton:hover {
+  background-color: var(--second-modal-color);
+  box-shadow: 4px 4px 6px var(--main-color);
+}
+
+/* Reloj y Alamra */
+
+.botones-reloj button {
+  border: none;
+  border-radius: 5px;
+  margin: .3rem;
+  padding: 5px 8px;
+  background-color: var(--main-modal-color);
+  font-family: var(--main-font);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.botones-reloj button:hover {
+  box-shadow: 3px 3px 10px var(--main-color);
+}
+
+/*Eventos del Teclado*/
+
+.stage {
+  display: flex;
+  min-height: 30vh;
+  background-color: var(--second-modal-color);
+}
+
+.ball {
+  margin: auto;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--second-color);
+  border-radius: 50%;
+}
+
+/*Botón scroll up*/
+
+.scrollUp {
+  position: fixed;
+  z-index: 999;
+  bottom: 17vw;
+  right: 2vw;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10px;
+  padding: 4px;
+  background-color: var(--main-color);
+  cursor: pointer;
+  border: none;
+  box-shadow: 1.5px 1.5px 1.5px 0px var(--second-color);
+  font-weight: 700;
+  color: var(--second-color);
+  transition: all .3s ease-out;
+}
+
+.scrollUp:hover {
+  background-color: var(--second-color);
+  color: var(--main-color)
+}
+
+.btHidden {
+  visibility: hidden;
+  opacity: 0;
+}

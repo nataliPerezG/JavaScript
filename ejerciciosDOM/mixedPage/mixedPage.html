@@ -4,16 +4,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Combo&display=swap" rel="stylesheet">
+  <!-- hamburger button -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+    integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="mixedPage.css">
+
   <title>Mixed Page</title>
 </head>
 
 <body>
 
-  <h1>Diferentes Elementos </h1>
+  <header>
+    <h2>Diferentes Elementos </h2>
+  </header>
+
+  <button class="hamburger hamburger--collapse" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+
+  <aside class="panel">
+    <nav class="menu">
+
+      <a href="#seccion1">Sección 1</a>
+      <a href="#seccion2">Sección 2</a>
+      <a href="#seccion3">Sección 3</a>
+      <a href="#seccion4">Sección 4</a>
+      <a href="#seccion5">Sección 5</a>
+      <a href="#seccion6">Sección 6</a>
+
+    </nav>
+  </aside>
+
+  <main>
+
+    <section id="seccion1" class="seccion">
+
+      <h3>Reloj Digital y Alarma Sonora</h3>
+
+      <div class="reloj-alarma"></div>
+
+      <div class="botones-reloj">
+        <button class="act-reloj">Activar Reloj</button>
+        <button class="desact-reloj">Desactivar Reloj</button>
+        <button class="act-alarma">Activar Alarma</button>
+        <button class="desact-alarma">Desactivar Alarma</button>
+      </div>
+
+    </section>
+
+    <section id="seccion2" class="seccion">
+
+      <h3>Eventos del Teclado</h3>
+
+      <article class="stage">
+        <div class="ball"></div>
+      </article>
+
+    </section>
+
+    <section id="seccion3" class="seccion">
+
+      <h3>Sección 3</h3>
+      <div id="conteo"></div>
+
+    </section>
+
+    <section id="seccion4" class="seccion">
+
+      <h3>Sección 4</h3>
+    </section>
 
 
-  <script src="mixedPage.js"></script>
+    <section id="seccion5" class="seccion">
+
+      <h3>Sección 5</h3>
+
+    </section>
+
+    <section id="seccion6" class="seccion">
+
+      <h3>Sección 6</h3>
+
+    </section>
+
+    <button class="scrollUp btHidden">&#11014;</button>
+
+  </main>
+
+  <script type="module" src="mixedPage.js"></script>
+
 </body>
 
 </html>
