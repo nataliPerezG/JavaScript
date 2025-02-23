@@ -159,6 +159,21 @@ h3 {
   box-shadow: 3px 3px 10px var(--main-color);
 }
 
+.reloj-alarma {
+  width: 50%;
+  height: 10dvh;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--second-modal-color);
+  padding: .5rem;
+}
+
+.reloj-alarma h4 {
+  margin: 0;
+}
+
 /*Eventos del Teclado*/
 
 .stage {
