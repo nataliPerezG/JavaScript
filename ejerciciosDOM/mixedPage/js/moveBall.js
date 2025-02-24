@@ -36,7 +36,6 @@ export function moveBall(e, stage, ball) {
       }
       break;
     default:
-      console.log("Tecla no asignada")
       break;
   }
 

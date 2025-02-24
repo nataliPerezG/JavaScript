@@ -4,6 +4,7 @@ import { reloj, alarma } from "./js/relojAlarma.js";
 import { moveBall } from "./js/moveBall.js";
 import { conteoRegresivo } from "./js/conteoRegresivo.js";
 import { scrollUpbtn } from "./js/scrollUp.js";
+import { darkMode } from "./js/darkMode.js";
 
 document.addEventListener("DOMContentLoaded", e => {
   showMenu(".hamburger", ".panel", "is-active", ".menu a");
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", e => {
   alarma(".alarma", ".act-alarma", ".desact-alarma");
   conteoRegresivo("conteo", "Feb 23 2025 19:54:00", "Time Off");
   scrollUpbtn(".scrollUp");
+  darkMode(".btn-theme", ".darkMode");
 })
 
 document.addEventListener("keydown", e => {
