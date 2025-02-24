@@ -119,18 +119,17 @@ h3 {
   z-index: 999;
   bottom: 2vw;
   right: 2vw;
-  width: 3.5rem;
+  width: 3rem;
   height: 3.5rem;
-  border-radius: 10px;
-  padding: 4px;
+  border-radius: 7px;
+  padding: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--main-color);
-  font-weight: 700;
+  font-weight: 500;
   font-family: var(--main-font);
   color: var(--second-color);
-  letter-spacing: 1px;
   cursor: pointer;
   border: none;
   box-shadow: 1.5px 1.5px 1.5px 0px var(--second-color);
@@ -195,24 +194,25 @@ h3 {
 .scrollUp {
   position: fixed;
   z-index: 999;
-  bottom: 17vw;
+  bottom: 13vw;
   right: 2vw;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 10px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
   padding: 4px;
   background-color: var(--main-color);
   cursor: pointer;
   border: none;
   box-shadow: 1.5px 1.5px 1.5px 0px var(--second-color);
   font-weight: 700;
+  font-size: 1.3rem;
   color: var(--second-color);
   transition: all .3s ease-out;
 }
 
 .scrollUp:hover {
-  background-color: var(--second-color);
-  color: var(--main-color)
+  background-color: var(--main-modal-color);
+  color: #333;
 }
 
 .btHidden {
