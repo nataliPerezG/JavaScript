@@ -12,12 +12,11 @@ document.addEventListener("DOMContentLoaded", e => {
   alarma(".alarma", ".act-alarma", ".desact-alarma");
   conteoRegresivo("conteo", "Feb 23 2025 19:54:00", "Time Off");
   scrollUpbtn(".scrollUp");
-  darkMode(".btn-theme", ".darkMode");
 })
 
 document.addEventListener("keydown", e => {
   moveBall(e, ".stage", ".ball")
 })
 
-
+darkMode(".btn-theme", "darkMode");
 
