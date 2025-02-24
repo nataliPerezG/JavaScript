@@ -65,7 +65,7 @@ h3 {
   margin-right: auto;
   width: 100%;
   max-width: var(--container-width);
-  min-height: 80vh;
+  min-height: 10vh;
   text-align: center;
 }
 
@@ -244,4 +244,35 @@ h3 {
 .darkMode {
   background-color: var(--dark-background-color);
   color: var(--second-color)
+}
+
+/* Tester */
+
+#tester {
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px 10px;
+  background-color: var(--second-modal-color);
+  border-radius: 10px;
+}
+
+#tester>input {
+  width: 60%;
+  margin: 5px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: var(--main-font);
+}
+
+#tester>button {
+  width: 40%;
+  margin: 5px;
+  padding: 5px;
+  font-family: var(--main-font);
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid var(--second-modal-color);
+  outline: none;
 }
